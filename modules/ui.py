@@ -1264,7 +1264,7 @@ def create_ui():
     for _interface, label, _ifid in interfaces:
         shared.tab_names.append(label)
 
-    with gr.Blocks(theme=shared.gradio_theme, analytics_enabled=False, title="Stable Diffusion") as demo:
+    with gr.Blocks(theme=shared.gradio_theme, analytics_enabled=False, title="Kaikun Stable Diffusion") as demo:
         settings.add_quicksettings()
 
         parameters_copypaste.connect_paste_params_buttons()
@@ -1312,8 +1312,8 @@ def versions_html():
     import launch
 
     python_version = ".".join([str(x) for x in sys.version_info[0:3]])
-    commit = launch.commit_hash()
-    tag = launch.git_tag()
+    commit = "5ef669de080814067961f28357256e8fe27544f4"
+    tag = "v1.6.0"
 
     if shared.xformers_available:
         import xformers
